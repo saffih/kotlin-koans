@@ -9,4 +9,6 @@ fun example5() {
 fun Shop.getCustomersSortedByNumberOfOrders(): List<Customer> {
     // Return a list of customers, sorted by the ascending number of orders they made
     return customers.sortedBy { it.orders.size }
+    // Learned: same leason count()<-> size
+    //return customers.sortedBy { it.orders.count() }
 }

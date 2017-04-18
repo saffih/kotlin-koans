@@ -17,5 +17,8 @@ fun Shop.getSetOfProductsOrderedByEveryCustomer(): Set<Product> {
     return customers.fold(allOrderedProducts, {
         orderedByAll, customer ->
         orderedByAll.intersect(customer.orderedProducts)
+// Learned: extention method
+//        todoCollectionTask()
+//        orderedByAll.intersect(customer.orders.flatMap { it.products })
     })
 }

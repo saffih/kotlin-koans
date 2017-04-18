@@ -34,6 +34,26 @@ fun <K, V> buildMap(build: MutableMap<K, V>.() -> Unit): Map<K, V> {
     return map
 }
 
+
+
+//// same using typealias
+//typealias MyMap = HashMap<Int,  String >
+//typealias MyMapInvoke = MyMap.() -> Unit
+//fun buildMap  ( invoked: MyMapInvoke  ) :  MyMap  {
+//    val m = MyMap()
+//    m.invoked()
+//    return m
+//}
+
+//typealias MyMap  <K, V> = HashMap<K,  V>
+//typealias MyMapInvoke <K, V>  = MyMap<K, V>.() -> Unit
+//fun <K,V> buildMap  ( invoked: MyMapInvoke<K,V>  ) :  MyMap<K,V>  {
+//    val m = MyMap<K,V>()
+//    m.invoked()
+//    return m
+//}
+
+
 fun task37(): Map<Int, String> {
 //    todoTask37()
     return buildMap {

@@ -24,4 +24,6 @@ fun todoTask2(): Nothing = TODO(
 fun task2(collection: Collection<Int>): String {
     //    todoTask2_2()
     return collection.joinToString(prefix = "{", postfix = "}")
+//    todoTask2()
+//    return collection.joinToString(separator = ", ", prefix = "{", postfix = "}")
 }

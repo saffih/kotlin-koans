@@ -9,4 +9,6 @@ fun example7() {
 fun Shop.groupCustomersByCity(): Map<City, List<Customer>> {
     // Return a map of the customers living in each city
     return customers.groupBy { it.city }
+//    todoCollectionTask()
+//    return customers.groupBy { it.city }
 }

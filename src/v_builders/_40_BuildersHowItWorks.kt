@@ -1,7 +1,8 @@
 package v_builders.builders
 
 import util.questions.Answer
-import util.questions.Answer.*
+import util.questions.Answer.b
+import util.questions.Answer.c
 
 fun todoTask40(): Nothing = TODO(
     """
@@ -33,6 +34,7 @@ fun task40() = linkedMapOf<Int, Answer>(
     c. function invocation
  */
         1 to c,
+//        1 to Answer.c,
 
 /*
 2. In the Kotlin code
@@ -50,6 +52,7 @@ fun task40() = linkedMapOf<Int, Answer>(
   c. argument value
  */
         2 to b,
+//        2 to Answer.b,
 
 /*
 3. The block
@@ -63,6 +66,7 @@ from the previous question is:
 
  */
         3 to b,
+//        3 to Answer.b,
 
 /*
 4. For the code
@@ -85,4 +89,5 @@ which of the following is true:
             }
  */
         4 to c
+//        4 to Answer.c
 )

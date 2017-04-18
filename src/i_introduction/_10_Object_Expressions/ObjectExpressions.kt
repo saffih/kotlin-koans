@@ -21,5 +21,16 @@ fun task10(): List<Int> {
     Collections.sort(arrayList, object : Comparator<Int> {
         override fun compare(x: Int, y: Int) = y - x
     })
+
+// Learned: Comparator is not strict 1,0,-1 but any positive negative would do.
+//    Collections.sort(arrayList,
+//            object:Comparator<Int> {
+//                override fun compare(a:Int, b:Int): Int { //=  if (a==b) 0 else (if (a<b) 1 else -1)
+//                    if (a==b) return 0
+//                    return if (a>b) -1 else 1
+//                }
+//
+//            }
+//    )
     return arrayList
 }

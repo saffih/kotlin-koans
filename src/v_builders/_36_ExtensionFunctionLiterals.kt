@@ -13,9 +13,16 @@ fun todoTask36(): Nothing = TODO(
     documentation = doc36()
 )
 
+//fun Int.isOdd() { this%2==1 }
+//fun Int.isEven() { this%2==0 }
+
 fun task36(): List<Boolean> {
     val isEven: Int.() -> Boolean = { this % 2 == 0 }
     val isOdd: Int.() -> Boolean = { !isEven() }
+
+    // // learned : ca  reference a value function the precedes
+//    val isEven: Int.() -> Boolean = { this%2==0 }
+//    val isOdd: Int.() -> Boolean = { this%2==1 }
 
     return listOf(42.isOdd(), 239.isOdd(), 294823098.isEven())
 }

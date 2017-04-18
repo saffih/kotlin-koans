@@ -36,3 +36,5 @@ fun todoTask5(): Nothing = TODO(
     references = { getPattern(); month })
 
 fun task5(): String = """\d{2} $month \d{4}"""
+//Learned: better use space as such
+//fun task5(): String = """\d{2}[ ]$month[ ]\d{4}"""

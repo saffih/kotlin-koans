@@ -17,6 +17,11 @@ fun todoTask3(): Nothing = TODO(
 fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false) =
         (if (toUpperCase) name.toUpperCase() else name) + number
 
+// Learned : allowed /n after =
+//          No need for extra parentheses ()
+//fun foo(name: String, number :  Int = 42, toUpperCase: Boolean = false): String = (
+//        (if (toUpperCase==true) name.toUpperCase() else name ) + number
+//        )
 fun task3(): String {
 //    todoTask3()
     return (foo("a") +

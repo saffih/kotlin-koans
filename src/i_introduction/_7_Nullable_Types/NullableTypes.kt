@@ -32,6 +32,10 @@ fun sendMessageToClient(
 
         mailer.sendMessage(email, message)
     }
+//    val email = client?.personalInfo?.email
+//    if ((email==null) || (message==null))
+//        return
+//    return mailer.sendMessage(email, message)
 }
 
 class Client (val personalInfo: PersonalInfo?)

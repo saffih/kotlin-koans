@@ -23,6 +23,7 @@ fun renderProductTable(): String {
     return html {
         table {
             tr (color = getTitleColor()) {
+//            tr (getTitleColor()){
                 td {
                     text("Product")
                 }
@@ -35,6 +36,8 @@ fun renderProductTable(): String {
             }
             val products = getProducts()
 //            todoTask39()
+            // learned: there is an IndexingIterator which calling iterable .withIndex uses to build an iterator
+            // with index by wraping a newly build iterator with IndexingIterator
             for ((index, product) in products.withIndex()) {
                 tr {
                     td (color = getCellColor(index, 0)) {
@@ -48,6 +51,20 @@ fun renderProductTable(): String {
                     }
                 }
             }
+//            todoTask39()
+//            products.forEachIndexed {i, product  ->
+//                tr {
+//                    td (getCellColor(i, 0)){
+//                        text(product.description)
+//                    }
+//                    td (getCellColor(i, 1)){
+//                        text(product.price)
+//                    }
+//                    td (getCellColor(i, 2)){
+//                        text(product.popularity)
+//                    }
+//                }
+//            }
         }
     }.toString()
 }

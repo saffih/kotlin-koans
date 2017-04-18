@@ -30,6 +30,16 @@ fun <T, C: MutableCollection<T>> Collection<T>.partitionTo(first: C, second: C, 
     return Pair(first, second)
 }
 
+public fun <T, C : MutableCollection<in T>> Iterable<T>.partitionTo(    first: C,
+                                                                        second:C,
+                                                                        predicate: (T) -> Boolean): Pair<C,C> {
+    forEach {   when (predicate(it)) {
+                    true  -> first.add(it)
+                    false -> second.add(it)
+            }
+    }
+    return Pair(first,second)
+}
 fun List<String>.partitionWordsAndLines(): Pair<List<String>, List<String>> {
 //    task41()
     return partitionTo(ArrayList<String>(), ArrayList()) { s -> !s.contains(" ") }

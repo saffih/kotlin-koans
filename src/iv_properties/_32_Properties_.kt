@@ -11,6 +11,11 @@ class PropertyExample() {
             counter++
         }
 
+//    var propertyWithCounter: Int? = null
+//    set(value){
+//        counter++
+//        field = value
+//    }
 }
 
 fun todoTask32(): Nothing = TODO(
